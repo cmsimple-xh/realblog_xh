@@ -40,7 +40,7 @@
 <teplad version="1.1">
   <!-- the URL form this xml-file -->
   <!-- full URL with http(s) -->
-  <xml_url>https://raw.githubusercontent.com/cmsimple-xh/realblog_xh/tree/3.0beta10/teplad.xml</xml_url>
+  <xml_url>https://raw.githubusercontent.com/cmsimple-xh/realblog_xh/3.0beta10/teplad.xml</xml_url>
   <!-- Attribute type for Data type: plugin, template or addon -->
   <!-- the name of the Plugin -->
   <name type="plugin">Realblog_XH</name>
@@ -116,7 +116,7 @@
   <!-- , use only .gif, .jpg, .jpeg, .png or .svg! -->
   <!-- The use of this different image formats is dependent on the configuration of the repository. -->
   <!-- If there no logo, enter this follows! - <logo></logo> -->
-  <logo>https://raw.githubusercontent.com/cmsimple-xh/realblog_xh/tree/3.0beta10/images/realblog.png</logo>
+  <logo>https://raw.githubusercontent.com/cmsimple-xh/realblog_xh/3.0beta10/images/realblog.png</logo>
 </teplad>
 <!-- Ich versichere, dass ich für alle angegebenen Texte und / oder Bilder die Urheberrechte besitze, oder eine entsprechende Nutzungsgenehmigung vorweisen kann. -->
 <!-- I guarantee, that I have the copyright for all texts and / or pictures, or can show a corresponding permission for their use. -->

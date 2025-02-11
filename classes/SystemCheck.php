@@ -46,24 +46,25 @@ class SystemCheck
      */
     private function getChecks()
     {
-        global $pth, $plugin_tx;
+        global $pth, $plugin_tx, $sl;
 
         $ptx = $plugin_tx['realblog'];
         $checks = array();
-        $phpVersion = '5.3.0';
+        $phpVersion = '7.4.0';
         $checks[sprintf($ptx['syscheck_phpversion'], $phpVersion)] = $this->checkPHPVersion($phpVersion);
         foreach (array('filter', 'sqlite3') as $extension) {
             $checks[sprintf($ptx['syscheck_extension'], $extension)] = $this->checkExtension($extension);
         }
-        $xhVersion = '1.6.3';
+        $xhVersion = '1.7.3';
         $checks[sprintf($ptx['syscheck_xhversion'], $xhVersion)] = $this->checkXHVersion($xhVersion);
-        $folders = array(
-            "{$pth['folder']['plugins']}realblog/config",
-            "{$pth['folder']['plugins']}realblog/css",
+        $paths = array(
+            "{$pth['folder']['plugins']}realblog/config/config.php",
+            "{$pth['folder']['plugins']}realblog/css/stylesheet.css",
             "{$pth['folder']['plugins']}realblog/languages",
+            "{$pth['folder']['plugins']}realblog/languages/$sl.php",
         );
-        foreach ($folders as $folder) {
-            $checks[sprintf($ptx['syscheck_writable'], $folder)] = $this->checkWritability($folder);
+        foreach ($paths as $path) {
+            $checks[sprintf($ptx['syscheck_writable'], $path)] = $this->checkWritability($path);
         }
         return $checks;
     }

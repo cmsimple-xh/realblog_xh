@@ -31,7 +31,7 @@ class SystemCheck
         global $plugin_cf;
 
         $view = new View('system-check');
-        $view->heading = $plugin_cf['realblog']['heading_level'];
+        $view->heading = 'h2';
         $view->checks = $this->getChecks();
         $view->imageURL = function ($state) {
             global $pth;
@@ -75,7 +75,7 @@ class SystemCheck
      */
     private function checkPHPVersion($version)
     {
-        return version_compare(PHP_VERSION, $version, 'ge') ? 'ok' : 'fail';
+        return version_compare(PHP_VERSION, $version, 'ge') ? 'xh_success' : 'xh_fail';
     }
 
     /**
@@ -84,7 +84,7 @@ class SystemCheck
      */
     private function checkExtension($extension)
     {
-        return extension_loaded($extension) ? 'ok' : 'fail';
+        return extension_loaded($extension) ? 'xh_success' : 'xh_fail';
     }
 
     /**
@@ -93,15 +93,15 @@ class SystemCheck
      */
     private function checkXHVersion($version)
     {
-        return version_compare(CMSIMPLE_XH_VERSION, "CMSimple_XH $version", 'ge') ? 'ok' : 'fail';
+        return version_compare(CMSIMPLE_XH_VERSION, "CMSimple_XH $version", 'ge') ? 'xh_success' : 'xh_fail';
     }
 
     /**
-     * @param string $folder
+     * @param string $path
      * @return string
      */
-    private function checkWritability($folder)
+    private function checkWritability($path)
     {
-        return is_writable($folder) ? 'ok' : 'warn';
+        return is_writable($path) ? 'xh_success' : 'xh_warning';
     }
 }

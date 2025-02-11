@@ -181,10 +181,8 @@ class Realblog
     {
         global $hjs;
 
-        $hjs .= tag(
-            'link rel="alternate" type="application/rss+xml"'
-            . ' href="./?realblog_feed=rss"'
-        );
+        $hjs .= '<link rel="alternate" type="application/rss+xml"'
+              . ' href="./?realblog_feed=rss">';
     }
 
     /**

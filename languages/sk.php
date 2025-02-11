@@ -83,5 +83,3 @@ $plugin_tx['realblog']['cf_rss_editor']="Email zodpovedného redaktora.";
 $plugin_tx['realblog']['cf_rss_logo']="Cesta k súboru s logom, relatívna k adresáru s obrázkami.";
 $plugin_tx['realblog']['cf_show_read_more_link']="Zobraziť odkaz \"Čítať dalej...\" a počet komentárov v núvodníku?";
 $plugin_tx['realblog']['cf_comments_form_protected']="Ukryť formulár pre komentáre pre návštevníkov a pre novo registrovaných členov? Vyžaduje pluginy MembersArea a Comments.";
-
-?>

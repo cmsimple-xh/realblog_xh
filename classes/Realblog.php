@@ -28,7 +28,7 @@ use ReflectionClass;
 
 class Realblog
 {
-    const VERSION = '@REALBLOG_VERSION@';
+    const VERSION = '3.0beta10';
 
     /**
      * @return void
@@ -150,7 +150,7 @@ class Realblog
         global $pth;
 
         $view = new View('info');
-        $view->logoPath = "{$pth['folder']['plugins']}realblog/realblog.png";
+        $view->logoPath = "{$pth['folder']['plugins']}realblog/images/realblog.png";
         $view->version = Realblog::VERSION;
         $systemCheck = new SystemCheck();
         return $view->render() . $systemCheck->render();

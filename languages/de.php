@@ -142,5 +142,3 @@ $plugin_tx['realblog']['cf_pagination_top']="Die Paginanierung oberhalb der Arti
 $plugin_tx['realblog']['cf_pagination_radius']="Die Anzahl von Seitenlinks, die in der Paginierung vor und nach der aktuellen Seite angezeigt werden sollen.";
 $plugin_tx['realblog']['cf_show_read_more_link']="Den Link zum Artikel und die Anzahl der Kommentare im Teaser anzeigen?";
 $plugin_tx['realblog']['cf_show_teaser']="Soll der Teaser als Vorspann vor dem Artikel wiederholt werden?";
-
-?>

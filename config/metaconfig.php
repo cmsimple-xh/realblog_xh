@@ -11,5 +11,3 @@ $plugin_mcf['realblog']['pagination_bottom']="bool";
 $plugin_mcf['realblog']['pagination_top']="bool";
 $plugin_mcf['realblog']['show_read_more_link']="bool";
 $plugin_mcf['realblog']['show_teaser']="bool";
-
-?>

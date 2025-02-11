@@ -50,6 +50,16 @@ this program; if not, see <http://www.gnu.org/licenses>.
 */
 ////////////////////////////////////////////////// HISTORIC LICENSE SECTION END
 
+/*
+* Add keys for the canonical link.
+*/
+$CanonicalLinkInc[] = 'realblog_id';
+if (isset($_GET['realblog_page'])
+&& $_GET['realblog_page'] != '1'
+&& !isset($_GET['realblog_id'])) {
+$CanonicalLinkInc[] = 'realblog_page';
+}
+
 require_once $pth['folder']['plugin'] . 'compat.php';
 
 Realblog\Realblog::init();

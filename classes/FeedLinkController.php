@@ -27,15 +27,50 @@ class FeedLinkController extends AbstractController
 {
     public function defaultAction($target)
     {
-        global $sn, $pth;
+        global $sn, $pth, $plugin_cf;
 
-        return <<<HTML
-<!-- realblog feed link -->
-<a href="$sn?realblog_feed=rss" target="$target">
-    <img src="{$pth['folder']['plugins']}realblog/images/rss.png"
-         alt="{$this->text['rss_tooltip']}" title="{$this->text['rss_tooltip']}"
-         style="border: 0">
-</a>
-HTML;
+        $feedIcon = $plugin_cf['realblog']['rss_button'];
+
+        $o = '<!-- realblog feed link -->'
+           . "\n"
+           . '<div class="rss-feed-button">'
+           . "\n";
+        if ($feedIcon == 'svg') {
+            $o .= '<a href="'
+                . $sn
+                . '?realblog_feed=rss" target="'
+                . $target
+                . '"><img class="rssFeedSvgIcon" src="'
+                . $pth['folder']['plugins']
+                . 'realblog/images/rss.svg" alt="'
+                . $this->text['rss_tooltip']
+                . '" title="'
+                . $this->text['rss_tooltip']
+                . '" style="border: 0"></a>';
+        } elseif ($feedIcon == 'fa') {
+            $o .= '<a href="'
+                . $sn
+                . '?realblog_feed=rss" target="'
+                . $target
+                . '" alt="'
+                . $this->text['rss_tooltip']
+                . '" title="'
+                . $this->text['rss_tooltip']
+                . '"><span class="fa fa-rss-square"> </span></a>';
+        } else {
+            $o .= '<a href="'
+                . $sn
+                . '?realblog_feed=rss" target="'
+                . $target
+                . '"><img class="rssFeedPngIcon" src="'
+                . $pth['folder']['plugins']
+                . 'realblog/images/rss.png" alt="'
+                . $this->text['rss_tooltip']
+                . '" title="'
+                . $this->text['rss_tooltip']
+                . '" style="border: 0"></a>';
+        }
+        $o .= "\n</div>\n";
+        return $o;
     }
 }

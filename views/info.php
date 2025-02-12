@@ -27,4 +27,9 @@
         this program. If not, see <a href="http://www.gnu.org/licenses/"
         target="_blank">http://www.gnu.org/licenses/</a>.
     </p>
+    <p class="realblog_license">
+        This plugin uses <a target="_blank" 
+        href="https://developers.google.com/fonts/docs/material_icons">
+        Google Material Icons</a>. These icon fonts are available under Apache license version 2.0.
+    </p>
 </div>

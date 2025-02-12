@@ -41,7 +41,7 @@ class SystemCheck
      */
     private function getChecks()
     {
-        global $pth, $plugin_tx, $sl;
+        global $pth, $plugin_cf, $plugin_tx, $sl;
 
         $ptx = $plugin_tx['realblog'];
         $checks = array();
@@ -52,6 +52,12 @@ class SystemCheck
         }
         $xhVersion = '1.7.3';
         $checks[sprintf($ptx['syscheck_xhversion'], $xhVersion)] = $this->checkXHVersion($xhVersion);
+        if ($plugin_cf['realblog']['rss_button'] == 'fa') {
+            $functions = array('fa_require');
+            foreach ($functions as $function) {
+                $checks[sprintf($ptx['syscheck_function'], $function)] = $this->checkFunction($function);
+            }
+        }
         $paths = array(
             "{$pth['folder']['plugins']}realblog/config/config.php",
             "{$pth['folder']['plugins']}realblog/css/stylesheet.css",
@@ -98,5 +104,14 @@ class SystemCheck
     private function checkWritability($path)
     {
         return is_writable($path) ? 'xh_success' : 'xh_warning';
+    }
+
+    /**
+     * @param string $function
+     * @return string
+     */
+    private function checkFunction($function)
+    {
+        return function_exists($function) ? 'xh_success' : 'xh_fail';
     }
 }

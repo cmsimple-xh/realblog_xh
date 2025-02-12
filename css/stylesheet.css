@@ -1,9 +1,44 @@
 .realblog_search_form {
     text-align: right;
 }
-
+/* rss feed button */
+.rss-feed-button {
+    margin-bottom: .5em;
+    text-align: right;
+}
+.rss-feed-button a {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+.rss-feed-button a:after {
+    content: "" !important;
+}
+/* for FA */
+.rss-feed-button span {
+    font-size: 3em;
+}
+/* for SVG */
+.rss-feed-button .rssFeedSvgIcon {
+    width: 48px;
+    height: auto;
+    filter: invert(38%) sepia(68%) saturate(2498%) hue-rotate(4deg) brightness(109%) contrast(102%);
+}
+/* for PNG */
+.rss-feed-button a img.rssFeedPngIcon {
+    width: 48px;
+    height: auto;
+}
+/* for print */
+.print .rss-feed-button {
+    display: none;
+}
+.print .realblog_entry_footer,
+.print .realblog_pagination,
+.print .realblog_buttons,
+.print .realblog_search_form {
+    display: none;
+}
 /* Textareas */
-
 .realblog_headline_field {
     width: 99%;
     height: 200px;
@@ -12,13 +47,10 @@
     width: 99%;
     height: 500px;
 }
-
 /* buttons */
-
 .realblog_buttons {
-padding: 6px 0;
+    padding: 6px 0;
 }
-
 .realblog_button {
     display: inline-block;
     border: 1px solid #888;
@@ -26,29 +58,24 @@ padding: 6px 0;
     text-decoration: none;
     cursor: pointer;
 }
-
 .realblog_fields_block #date1 {
-margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 .realblog_fields_block table {
     width: 100%;
 }
-
 .realblog_label {
     font-weight: bold;
 }
-
 .realblog_entry_footer {
     overflow: auto;
 }
 
 .realblog_read_more {
-float: right;
-padding-bottom: 12px;
+    float: right;
+    padding-bottom: 12px;
 }
-
 /* BACKEND select entry table */
-
 .realblog_table {
     width: 100%;
     table-layout: auto;
@@ -71,11 +98,9 @@ padding-bottom: 12px;
     border: none;
     cursor: pointer;
 }
-
 .realblog_table_details {
-border: 1px solid #075FB9;
+    border: 1px solid #075FB9;
 }
-
 .realblog_table tbody td {
     padding: 0.3em;
     text-align: center;
@@ -84,7 +109,6 @@ border: 1px solid #075FB9;
 .realblog_table tbody td:nth-child(7), .realblog_table tbody td:nth-child(8) {
     font-weight: bold;
 }
-
 .realblog_table tbody td.realblog_table_title {
     padding: 0.3em 1em;
     text-align: left;
@@ -93,29 +117,25 @@ border: 1px solid #075FB9;
     padding: 0.3em 1em;
     text-align: right;
 }
-.realblog_table tbody td img, .realblog_table thead th img {
-border: 0;
+.realblog_table tbody td img,
+.realblog_table thead th img {
+    border: 0;
 }
-
 .realblog_pagination {
     font-size: small;
     text-align: right;
 }
-
 .realblog_table_paging {
     text-align: center;
 }
 .realblog_table_paging a {
     text-decoration: none;
 }
-
 /* entries overwiew */
-
 .realblog_entries_preview {
-border-top: 1px solid;
-margin: 10px 0 0 0;
+    border-top: 1px solid;
+    margin: 10px 0 0 0;
 }
-
 /**
  * Multi column overwiew
  *
@@ -134,7 +154,6 @@ margin: 10px 0 0 0;
     clear: both;
 }
 */
-
 /* 2 colums
 .realblog_entry_preview {width: 50%}
 .realblog_entry_preview:nth-child(2n+1) {clear: both}
@@ -151,17 +170,15 @@ margin: 10px 0 0 0;
 .realblog_entry_preview {width: 20%}
 .realblog_entry_preview:nth-child(5n+1) {clear: both}
 */
-
 .realblog_show_date {
-font-size: 94%;
-font-weight: 700;
-font-style: italic;
-margin: 6px 0 10px 0;
+    font-size: 94%;
+    font-weight: 700;
+    font-style: italic;
+    margin: 6px 0 10px 0;
 }
-
 .realblog_show_story {
-width: 100%;
-border-bottom: 1px solid;
+    width: 100%;
+    border-bottom: 1px solid;
 }
 .realblog_show_story:after {
     content: "";
@@ -173,51 +190,42 @@ border-bottom: 1px solid;
     font-style: italic;
 }
 .realblog_show_story_entry {
-width: 100%;
-border-bottom: 0;
+    width: 100%;
+    border-bottom: 0;
 }
-
 .realblog_show_box {
-margin: 10px 0;
-width:100%;
-overflow: hidden;
+    margin: 10px 0;
+    width:100%;
+    overflow: hidden;
 }
-
 /* tpl_classes for function realbloglink */
-
 .realblog_tpl_show_date {
-font-style: italic;
-border-top: 1px solid;
-padding: 5px 0 0 0;
-margin: 6px 0 0 0;
+    font-style: italic;
+    border-top: 1px solid;
+    padding: 5px 0 0 0;
+    margin: 6px 0 0 0;
 }
-
 .realblog_tpl_show_story {}
 
 .realblog_tpl_read_more {
     text-align: right;
 }
-
 .realblog_tpl_show_box {
-border-bottom: 1px solid;
-padding: 0 0 8px 0;
+    border-bottom: 1px solid;
+    padding: 0 0 8px 0;
 }
-
 .realblog_most_popular a, .realblog_most_popular span {
     display: block;
 }
-
 .realblog_admin {
-height:24px;
-background-color: #075FB9;
-color: White;
-display: block;
+    height:24px;
+    background-color: #075FB9;
+    color: White;
+    display: block;
 }
-
 .realblog_date_selector {
     margin: 0 0 -3px 1px;
 }
-
 .realblog_archive_title {
     font-weight: bold;
 }
@@ -227,16 +235,13 @@ display: block;
 .realblog_archive li {
     list-style: none;
 }
-
 .realblog_search_input {
-border: 1px solid #999;
-padding: 2px 5px;
+    border: 1px solid #999;
+    padding: 2px 5px;
 }
-
 .realblog_searchresult_head {
     font-weight: bold;
 }
-
 /*
  * Back-end.
  */

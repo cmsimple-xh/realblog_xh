@@ -11,6 +11,7 @@ $plugin_cf['realblog']['heading_above_meta']="";
 $plugin_cf['realblog']['links_visible']="4";
 $plugin_cf['realblog']['rss_enabled']="true";
 $plugin_cf['realblog']['rss_editor']="webmaster@example.com";
+$plugin_cf['realblog']['rss_button']="png";
 $plugin_cf['realblog']['rss_logo']="";
 $plugin_cf['realblog']['rss_entries']="20";
 $plugin_cf['realblog']['pagination_bottom']="true";

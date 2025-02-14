@@ -198,7 +198,7 @@ SQL;
      * @param string $sql
      * @return stdClass[]
      */
-    private static function fetchAllAsObject($sql, array $bindings = null)
+    private static function fetchAllAsObject($sql, ?array $bindings = null)
     {
         $connection = DB::getConnection();
         if (isset($bindings)) {

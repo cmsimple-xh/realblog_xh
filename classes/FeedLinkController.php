@@ -31,11 +31,11 @@ class FeedLinkController extends AbstractController
 
         return <<<HTML
 <!-- realblog feed link -->
-<a href="$sn?realblog_feed=rss" target="$target">
-    <img src="{$pth['folder']['plugins']}realblog/images/rss.png"
-         alt="{$this->text['rss_tooltip']}" title="{$this->text['rss_tooltip']}"
-         style="border: 0">
-</a>
+<div class="realblog_rss_feed_button">
+    <a class="realblog_rss_image" href="$sn?realblog_feed=rss" target="$target">
+        <span alt="{$this->text['rss_tooltip']}" title="{$this->text['rss_tooltip']}" style="border: 0"></span>
+    </a>
+</div>
 HTML;
     }
 }
